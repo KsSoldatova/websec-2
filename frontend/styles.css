@@ -1,0 +1,199 @@
+
+/* Основные стили */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f9fc;
+    color: #2c3e50;
+    margin: 0;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+/* Стили для расписания */
+.schedule-container {
+    margin-top: 20px;
+    padding: 15px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.schedule-title {
+    color: #2c3e50;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.week-info {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin-top: 15px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.1);
+}
+
+.schedule-table th {
+    background-color: #3498db;
+    color: white;
+    padding: 12px 15px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.schedule-table td {
+    padding: 12px 15px;
+    border: 1px solid #d6eaf8;
+    vertical-align: top;
+}
+
+.schedule-table tr:hover {
+    background-color: #f0f7fc;
+}
+
+.time-column {
+    width: 10%;
+    text-align: center;
+    font-weight: bold;
+    color: #2980b9;
+    background-color: #f0f7fc;
+}
+
+.day-column {
+    width: 18%;
+}
+
+.lesson-item {
+    margin-bottom: 10px;
+}
+
+.lesson-subject {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.lesson-place, .lesson-teacher, .lesson-groups {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 3px;
+}
+
+.lesson-empty {
+    color: #95a5a6;
+    font-style: italic;
+    text-align: center;
+    padding: 10px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.1);
+}
+
+h1 {
+    color: #2980b9;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.2em;
+}
+
+/* Стили поиска */
+.search-container {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.select {
+    padding: 10px 15px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    background-color: white;
+    color: #2c3e50;
+    font-size: 16px;
+    flex-grow: 1;
+    min-width: 200px;
+}
+
+.search-input {
+    padding: 10px 15px;
+    border: 2px solid #3498db;
+    border-radius: 5px;
+    font-size: 16px;
+    flex-grow: 3;
+    min-width: 250px;
+}
+
+#search-button {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+#search-button:hover {
+    background-color: #2980b9;
+}
+
+.results-list {
+    margin-bottom: 20px;
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #d6eaf8;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.result-item {
+    padding: 12px 15px;
+    border-bottom: 1px solid #d6eaf8;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.result-item:hover {
+    background-color: #ebf5fb;
+}
+
+.result-item:last-child {
+    border-bottom: none;
+}
+
+.result-name {
+    font-weight: 600;
+    color: #2874a6;
+}
+
+.result-type {
+    font-size: 0.8em;
+    color: #7f8c8d;
+    margin-top: 3px;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .search-container {
+        flex-direction: column;
+    }
+    
+    .schedule-table {
+        display: block;
+        overflow-x: auto;
+    }
+}

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Расписание СГАУ</title>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+  <div class="container">
+    <h1>Расписание СГАУ</h1>
+    
+    <div class="search-container">
+      <select id="search-type" class="select">
+        <option value="group">Поиск по группе</option>
+        <option value="teacher">Поиск по преподавателю</option>
+      </select>
+      
+      <input type="text" id="search-input" class="search-input" placeholder="Введите номер группы">
+      <button id="search-button">Поиск</button>
+    </div>
+
+    <div id="results-list" class="results-list"></div>
+
+    <div id="loading" class="loading">
+      <div class="spinner"></div>
+      <span>Загрузка...</span>
+    </div>
+
+    <div class="schedule-container" id="schedule-container">
+      <!-- Здесь будет отображаться расписание в табличном формате -->
+      <table class="schedule-table">
+        <thead>
+          <tr>
+            <th style = "width:10%">Время</th>
+            <th style = "width:15%">Понедельник</th>
+            <th style = "width:15%">Вторник</th>
+            <th style = "width:15%">Среда</th>
+            <th style = "width:15%">Четверг</th>
+            <th style = "width:15%">Пятница</th>
+            <th style = "width:15%">Суббота</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Пример строки с временем и занятиями -->
+          <tr>
+            <td class="time-column">08:00 - 09:30</td>
+            <td class="day-column">
+              <div class="lesson-item">
+                <div class="lesson-subject">Математика</div>
+                <div class="lesson-place">Ауд. 101</div>
+                <div class="lesson-teacher">Иванов И.И.</div>
+                <div class="lesson-groups">Группы: ПИ-201</div>
+              </div>
+            </td>
+            <td class="day-column"></td>
+            <td class="day-column">
+              <div class="lesson-item">
+                <div class="lesson-subject">Физика</div>
+                <div class="lesson-place">Ауд. 205</div>
+                <div class="lesson-teacher">Петров П.П.</div>
+                <div class="lesson-groups">Группы: ПИ-201</div>
+              </div>
+            </td>
+            <td class="day-column"></td>
+            <td class="day-column">
+              <div class="lesson-item">
+                <div class="lesson-subject">Программирование</div>
+                <div class="lesson-place">Ауд. 310</div>
+                <div class="lesson-teacher">Сидоров С.С.</div>
+                <div class="lesson-groups">Группы: ПИ-201</div>
+              </div>
+            </td>
+            <td class="day-column"></td>
+          </tr>
+          <!-- Другие строки с временем и занятиями -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
