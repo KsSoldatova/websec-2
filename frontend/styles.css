@@ -147,6 +147,12 @@ h1 {
     transition: background-color 0.3s;
 }
 
+.week-nav-btn {
+    background-color: white;
+    border: 1px solid #d6eaf8;
+    border-radius: 5px;
+}
+
 #search-button:hover {
     background-color: #2980b9;
 }
@@ -184,6 +190,14 @@ h1 {
     font-size: 0.8em;
     color: #7f8c8d;
     margin-top: 3px;
+}
+
+.schedule-table tbody tr:last-child {
+    display: none;
+}
+
+.tbody-row:first-child {
+    display: none;
 }
 
 /* Адаптивность */

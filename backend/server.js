@@ -115,7 +115,8 @@ app.get('/api/teachers', (req, res) => {
 app.get('/api/schedule/group/:groupId', async (req, res) => {
     try {
         const groupId = req.params.groupId;
-        const url = `https://ssau.ru/rasp?groupId=${groupId}`;
+        const week = req.query.week || '';
+        const url = `https://ssau.ru/rasp?groupId=${groupId}${week ? `&selectedWeek=${week}` : ''}`;
         
         const response = await axios.get(url);
         const schedule = parseSchedule(response.data);
@@ -133,7 +134,8 @@ app.get('/api/schedule/group/:groupId', async (req, res) => {
 app.get('/api/schedule/teacher/:staffId', async (req, res) => {
     try {
         const staffId = req.params.staffId;
-        const url = `https://ssau.ru/rasp?staffId=${staffId}`;
+        const week = req.query.week || '';
+        const url = `https://ssau.ru/rasp?staffId=${staffId}${week ? `&selectedWeek=${week}` : ''}`;
         
         const response = await axios.get(url);
         const schedule = parseSchedule(response.data, true);
